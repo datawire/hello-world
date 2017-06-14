@@ -1,5 +1,6 @@
-# hello-world
-Hello world Docker image
+# Hello World
+
+Hello world Docker image for testing :)
 
 # License
 
