@@ -9,6 +9,7 @@ class Handler(BaseHTTPRequestHandler):
     """Respond to requests with hello."""
 
     def do_GET(self):
+        """Handle GET"""
         self.send_response(HTTPStatus.OK)
         self.send_header("Content-type", "text/plain")
         self.send_header("Content-length", len(MESSAGE))
