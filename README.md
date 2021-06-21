@@ -30,7 +30,7 @@ $ ./venv/bin/python3 server.py
 ### Build a Docker image
 
 ```shell
-$ docker build -t datawire/hello-world .
+$ docker build -t rewardops/k8s-workshop .
 Sending build context to Docker daemon  20.99kB
 Step 1/7 : FROM python:3-alpine
  ---> a93594ce93e7
@@ -55,7 +55,7 @@ Step 7/7 : CMD ["python3", "./server.py"]
 Removing intermediate container 2446171f3946
  ---> 7d692d619894
 Successfully built 7d692d619894
-Successfully tagged datawire/hello-world:latest
+Successfully tagged rewardops/k8s-workshop:latest
 ```
 
 ### Run it in Docker
@@ -63,7 +63,7 @@ Successfully tagged datawire/hello-world:latest
 Build the image first, then launch it using `docker run`.
 
 ```shell
-$ docker run --rm -it -p 8000:8000 datawire/hello-world
+$ docker run --rm -it -p 8000:8000 rewardops/k8s-workshop
  * Serving Flask app "server" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
