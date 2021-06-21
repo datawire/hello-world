@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-workshop-configmap
+data:
+  app.config: |
+    a=1
+    b=2
+    c=3
