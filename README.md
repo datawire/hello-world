@@ -114,12 +114,14 @@ $ kubectl logs hello-world-776fc969b9-8m457
 ```
 
 ### Run it in minikube
+```shell
 minikube start
 eval $(minikube -p minikube docker-env)
 kubectl apply -f k8s/configmap.yaml
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/secrets.yaml
 kubectl apply -f k8s/service.yaml
+```
 
 ## License
 
