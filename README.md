@@ -113,7 +113,13 @@ $ kubectl logs hello-world-776fc969b9-8m457
 10.0.235.232 - - [03/Apr/2019 17:15:29] "GET / HTTP/1.1" 200 -
 ```
 
-
+### Run it in minikube
+minikube start
+eval $(minikube -p minikube docker-env)
+kubectl apply -f k8s/configmap.yaml
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/secrets.yaml
+kubectl apply -f k8s/service.yaml
 
 ## License
 
