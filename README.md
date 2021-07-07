@@ -117,12 +117,24 @@ $ kubectl logs hello-world-776fc969b9-8m457
 ```shell
 minikube start
 eval $(minikube -p minikube docker-env)
+docker build -t rewardops/k8s-workshop .
 kubectl apply -f k8s/configmap.yaml
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/secrets.yaml
 kubectl apply -f k8s/service.yaml
 ```
 
+### Clean up
+
+Delete minikube
+```shell
+minikube delete
+```
+
+If you are running it from your laptop and would like to clean all images you can run:
+```shell
+docker system prune -a
+```
 ## License
 
 Licensed under Apache 2.0. Please see [License](LICENSE) for details.
