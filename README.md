@@ -21,8 +21,8 @@ If you want to put the repo somewhere other than in `~/code`, feel free.
 
 ```shell
 $ python3 -m venv venv
-
-$ ./venv/bin/pip install -qr requirements.txt
+$ source venv/bin/activate
+$ pip install -qr requirements.txt
 
 $ ./venv/bin/python3 server.py
  * Serving Flask app "server" (lazy loading)
