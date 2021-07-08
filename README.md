@@ -6,6 +6,17 @@ This is referenced in <https://blog.openshift.com/telepresence-local-development
 
 ## Usage
 
+### Clone this repository
+
+Open up your terminal, and then run something similar to the below commands.
+```shell
+cd ~
+mkdir code
+cd code
+git clone git@github.com:rewardops/k8s-workshop.git
+```
+If you want to put the repo somewhere other than in `~/code`, feel free.
+
 ### Run it locally
 
 ```shell
