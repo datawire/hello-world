@@ -76,6 +76,19 @@ $ docker run --rm -it -p 8000:8000 rewardops/k8s-workshop
 172.17.0.1 - - [03/Apr/2019 17:04:59] "GET / HTTP/1.1" 200 -
 ```
 
+
+### Run it in minikube
+```shell
+minikube start
+eval $(minikube -p minikube docker-env)
+docker build -t rewardops/k8s-workshop .
+kubectl apply -f k8s/configmap.yaml
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/secrets.yaml
+kubectl apply -f k8s/service.yaml
+```
+
+
 ### Run it in Kubernetes
 
 Build and push the image first, then launch it using `kubectl run`.
@@ -111,17 +124,6 @@ $ kubectl logs hello-world-776fc969b9-8m457
  * Debugger is active!
  * Debugger PIN: 305-616-111
 10.0.235.232 - - [03/Apr/2019 17:15:29] "GET / HTTP/1.1" 200 -
-```
-
-### Run it in minikube
-```shell
-minikube start
-eval $(minikube -p minikube docker-env)
-docker build -t rewardops/k8s-workshop .
-kubectl apply -f k8s/configmap.yaml
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/secrets.yaml
-kubectl apply -f k8s/service.yaml
 ```
 
 ### Clean up
