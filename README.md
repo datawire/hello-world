@@ -100,6 +100,7 @@ kubectl apply -f k8s/configmap.yaml
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/secrets.yaml
 kubectl apply -f k8s/service.yaml
+minikube service hello-world
 ```
 
 
