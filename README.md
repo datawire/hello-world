@@ -89,6 +89,7 @@ $ docker run --rm -it -p 8000:8000 rewardops/k8s-workshop
 172.17.0.1 - - [03/Apr/2019 17:04:59] "GET / HTTP/1.1" 200 -
 ```
 
+Now open up your web browser and navigate to http://0.0.0.0:8000 . If your browser says "Hello, world!" and if you see output similar to the above in your terminal, then congrats, you just ran the Flask server in a Docker coontainer.
 
 ### Run it in minikube
 ```shell
