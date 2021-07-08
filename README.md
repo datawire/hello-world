@@ -38,6 +38,8 @@ $ ./venv/bin/python3 server.py
 [...]
 ```
 
+Does your terminal output look similar to the above? Yes? Great! You just started up a sample Flask server. You can close the Flask server with control+c now and move onto the next step.
+
 ### Build a Docker image
 
 ```shell
