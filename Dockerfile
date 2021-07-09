@@ -4,4 +4,5 @@ EXPOSE 8000
 COPY requirements.txt .
 RUN pip install -qr requirements.txt
 COPY server.py .
+COPY templates .
 CMD ["python3", "./server.py"]
