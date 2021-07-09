@@ -24,7 +24,7 @@ $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install -qr requirements.txt
 
-$ ./venv/bin/python3 server.py
+$ python3 server.py
  * Serving Flask app "server" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
