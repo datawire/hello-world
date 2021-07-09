@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import os
 
 PORT = 8000
@@ -28,7 +28,7 @@ def config():
     except:
       result = "File k8s-workshop-configmap/app.config not found."
 
-      return result
+    return render_template("template.html", content=result) 
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=PORT)
