@@ -25,6 +25,11 @@ jx:
 # define environment variables here as a map of key: value
 env:
 
+#envFrom
+envFrom:
+  - secretRef:
+    name: k8s-workshop-secret
+
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
 
