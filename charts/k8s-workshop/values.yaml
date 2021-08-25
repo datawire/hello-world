@@ -133,7 +133,7 @@ jxRequirements:
       secretName: ""
 
 volumes:
-  - name: config-volume
-    mountPath: /usr/src/app/k8s-workshop-configmap
-    ConfigMap:
-      name: k8s-workshop-configmap
+  name: "config-volume"
+  mountPath: "/usr/src/app/k8s-workshop-configmap"
+  configMap:
+    name: "k8s-workshop-configmap"
