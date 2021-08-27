@@ -38,10 +38,21 @@ spec:
       serviceAccountName: {{ template "fullname" . }}
 {{- end }}
 {{- end }}
+{{- if .Values.volumes.name }}
+      volumes:
+        - name: {{ .Values.volumes.name }}
+          configMap:
+            name:  {{ .Values.volumes.configMap.name }}
+{{- end }}
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
+{{- if .Values.volumes.name }}
+        volumeMounts:
+          - name: {{ .Values.volumes.name }}
+            mountPath: {{ .Values.volumes.mountPath }}
+{{- end }}
         env:
         - name: VERSION
           value: {{ .Chart.Version }}
