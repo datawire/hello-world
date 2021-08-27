@@ -1,9 +1,13 @@
 FROM python:3-alpine
+
 WORKDIR /usr/src/app
-EXPOSE 8000
+
 COPY requirements.txt .
+
 RUN pip install -qr requirements.txt
+
+COPY ./templates ./templates
 COPY server.py .
-RUN mkdir templates
-COPY templates/ templates/
+
+EXPOSE 8000
 CMD ["python3", "./server.py"]
