@@ -31,7 +31,7 @@ def config():
     return render_template("template.html", content=result) 
 
 @app.route("/jx")
-def root():
+def jx():
     result = "Welcome to Jenkins X. Hope you have fun".encode("utf-8")
     return result
 
