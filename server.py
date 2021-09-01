@@ -30,5 +30,10 @@ def config():
 
     return render_template("template.html", content=result) 
 
+@app.route("/jx")
+def jx():
+    result = "Welcome to Jenkins X. Hope you have fun".encode("utf-8")
+    return result
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=PORT)
