@@ -27,7 +27,7 @@ env:
 
 envFrom:
   - secretRef:
-    name: k8s-workshop-secret 
+      name: k8s-workshop-secret 
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
 
