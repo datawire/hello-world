@@ -3,7 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 # Add annotations to the pods
-podAnnotations: {}
+podAnnotations: 
+  wave.pusher.com/update-on-config-change: "true"
 # Add labels to the pods
 podsLabels: {}
 # Add labels to the deployment
