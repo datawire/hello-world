@@ -3,7 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 # Add annotations to the pods
-podAnnotations: {}
+podAnnotations: 
+  wave.pusher.com/update-on-config-change: "true"
 # Add labels to the pods
 podsLabels: {}
 # Add labels to the deployment
@@ -25,6 +26,9 @@ jx:
 # define environment variables here as a map of key: value
 env:
 
+envFrom:
+  - secretRef:
+      name: k8s-workshop-secret 
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
 
