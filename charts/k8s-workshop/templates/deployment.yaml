@@ -83,8 +83,8 @@ spec:
       - name: {{ quote $pval }}
 {{- end }}
 {{- if .Values.volumes }}
-      volumeMounts:
-      - mountPath: {{ .Values.volumes.mountpath }}
-        name: {{ .Values.volumes.name }}
+        volumeMounts:
+        - mountPath: {{ .Values.volumes.mountpath }}
+          name: {{ .Values.volumes.name }}
 {{- end }}
 {{- end }}
