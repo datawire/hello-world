@@ -83,6 +83,7 @@ spec:
 {{- if .Values.volumes }}
         volumeMounts:
         - mountPath: {{ .Values.volumes.mountpath }}/settings.local.yml
+          subPath: settings.local.yml
           name: {{ .Values.volumes.name }}
 {{- end }}
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
