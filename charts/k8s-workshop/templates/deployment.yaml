@@ -77,14 +77,14 @@ spec:
           timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
         resources:
 {{ toYaml .Values.resources | indent 12 }}
-      terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
-      imagePullSecrets:
-{{- range $pval := .Values.jx.imagePullSecrets }}
-      - name: {{ quote $pval }}
-{{- end }}
 {{- if .Values.volumes }}
         volumeMounts:
         - mountPath: {{ .Values.volumes.mountpath }}
           name: {{ .Values.volumes.name }}
+{{- end }}
+      terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
+      imagePullSecrets:
+{{- range $pval := .Values.jx.imagePullSecrets }}
+      - name: {{ quote $pval }}
 {{- end }}
 {{- end }}
