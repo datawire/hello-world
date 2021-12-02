@@ -138,5 +138,5 @@ jxRequirements:
 
 volumes:
   name: settings-local-yml
-  secretname: settings.local.yml
+  secretname: k8s-workshop-secret
   mountpath: /pangea.rewardops.net/current/config
