@@ -44,7 +44,7 @@ spec:
         secret:
           secretName: {{ .Values.volumes.secretname }}
           items:
-          - key: settings.local.yaml 
+          - key: settings.local.yml 
             path: app.config
 {{- end }}
       containers:
