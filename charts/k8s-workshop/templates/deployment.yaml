@@ -82,7 +82,7 @@ spec:
 {{ toYaml .Values.resources | indent 12 }}
 {{- if .Values.volumes }}
         volumeMounts:
-        - mountPath: {{ .Values.volumes.mountpath }}
+        - mountPath: {{ .Values.volumes.mountpath }}/settings.local.yml
           name: {{ .Values.volumes.name }}
 {{- end }}
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
