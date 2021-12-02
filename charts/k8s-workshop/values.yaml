@@ -136,4 +136,7 @@ jxRequirements:
       production: false
       secretName: ""
 
-
+volumes:
+  name: settings.local.yml
+  secretname: testing-settings.local.yml
+  mountpath: /pangea.rewardops.net/current/config
