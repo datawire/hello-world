@@ -83,7 +83,7 @@ spec:
 {{- if .Values.volumes }}
         volumeMounts:
         - mountPath: {{ .Values.volumes.mountpath }}
-            subPath: app.config
+          subPath: app.config
           name: {{ .Values.volumes.name }}
 {{- end }}
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
