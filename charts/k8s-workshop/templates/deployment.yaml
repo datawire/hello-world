@@ -39,10 +39,10 @@ spec:
 {{- end }}
 {{- end }}
 {{- if .Values.volumes }}
-     volumes:
-       - name: {{ .Values.volumes.name }}
-         secret:
-           secretName: {{ .Values.volumes.secretname }}
+      volumes:
+      - name: {{ .Values.volumes.name }}
+        secret:
+          secretName: {{ .Values.volumes.secretname }}
 {{- end }}
       containers:
       - name: {{ .Chart.Name }}
@@ -82,9 +82,9 @@ spec:
 {{- range $pval := .Values.jx.imagePullSecrets }}
       - name: {{ quote $pval }}
 {{- end }}
-{{- end }}
 {{- if .Values.volumes }}
       volumeMounts:
       - mountPath: {{ .Values.volumes.mountpath }}
         name: {{ .Values.volumes.name }}
+{{- end }}
 {{- end }}
