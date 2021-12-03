@@ -38,6 +38,15 @@ spec:
       serviceAccountName: {{ template "fullname" . }}
 {{- end }}
 {{- end }}
+{{- if .Values.volumes }}
+      volumes:
+      - name: {{ .Values.volumes.name }}
+        secret:
+          secretName: {{ .Values.volumes.secretname }}
+#          items:
+#          - key: settings.local.yml 
+#            path: app.config
+{{- end }}
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -71,6 +80,12 @@ spec:
           timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
         resources:
 {{ toYaml .Values.resources | indent 12 }}
+{{- if .Values.volumes }}
+        volumeMounts:
+        - mountPath: {{ .Values.volumes.mountpath }}/settings.local.yml
+          subPath: settings.local.yml
+          name: {{ .Values.volumes.name }}
+{{- end }}
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
       imagePullSecrets:
 {{- range $pval := .Values.jx.imagePullSecrets }}

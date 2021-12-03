@@ -136,4 +136,7 @@ jxRequirements:
       production: false
       secretName: ""
 
-
+volumes:
+  name: settings-local-yml
+  secretname: k8s-workshop-secret
+  mountpath: /usr/src/app/templates
