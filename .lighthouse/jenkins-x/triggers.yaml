@@ -7,6 +7,13 @@ spec:
     always_run: true
     optional: false
     source: "pullrequest.yaml"
+  - name: chuck
+    context: chuck
+    always_run: false
+    optional: false
+    skip_report: true
+    trigger: "/jx chuck"
+    source: "chuck.yaml"
   postsubmits:
   - name: release
     context: "release"
