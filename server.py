@@ -1,4 +1,5 @@
 from flask import Flask
+from collections.abc import Mapping
 
 PORT = 8000
 MESSAGE = "Hello, world!\n"
